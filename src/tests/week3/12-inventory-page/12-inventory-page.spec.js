@@ -44,3 +44,9 @@ test('[YAJSC-12] inventory page test', async ({ page }) => {
   await expect(inventoryPage.itemsElements/* remove this comment - put `inventoryPage.itemsElements` here */, 'Number of items on the page is not correct')
       .toHaveCount(expectedItemsQuantity);
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

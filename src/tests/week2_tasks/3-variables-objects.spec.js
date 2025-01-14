@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('[YAJSC-3] should login successfully using let & const variables and complex data type (object)', async ({ page }) => {
+test('[YAJSC-3] should login successfully using const variable and complex data type (object)', async ({ page }) => {
 
   /**
    * Task 2:
@@ -26,3 +26,9 @@ test('[YAJSC-3] should login successfully using let & const variables and comple
   await expect(page.locator('.inventory_item'), 'Number of items on the page is not correct')
       .toHaveCount(expectedItemsQuantity);
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

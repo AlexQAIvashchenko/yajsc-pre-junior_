@@ -35,3 +35,9 @@ test('[YAJSC-11] login page test', async ({ page }) => {
   await expect(page.locator('.inventory_item'), 'Number of items on the page is not correct')
       .toHaveCount(expectedItemsQuantity);
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

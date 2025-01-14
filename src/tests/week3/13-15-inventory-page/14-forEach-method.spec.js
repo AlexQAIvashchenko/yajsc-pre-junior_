@@ -29,3 +29,9 @@ test('[YAJSC-14] should display all products', async ({ page }) => {
     expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);
   })
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

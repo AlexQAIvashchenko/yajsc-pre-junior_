@@ -42,3 +42,9 @@ test('[YAJSC-8] should contain all items names on the page', async ({ page }) =>
     expect(actualProduct, `Displayed item [${i}] name is not correct`).toEqual(expectedItemsNames[i])
   }
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

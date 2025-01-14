@@ -16,3 +16,9 @@ export class InventoryPage {
     return quantity;
   }
 }
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

@@ -19,3 +19,9 @@ test('[YAJSC-2] should verify displayed amount of items on the page', async ({ p
   await expect(page.locator('.inventory_item'), 'Number of items on the page is not correct')
       .toHaveCount(/* remove this comment - put `expectedItemsQuantity` variable here */);
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

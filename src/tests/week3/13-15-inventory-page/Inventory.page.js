@@ -23,3 +23,9 @@ export class InventoryPage {
     return actualProductsNames;
   }
 }
+
+/**
+ * Useful links:
+ * -
+ * -
+ */

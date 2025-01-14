@@ -35,3 +35,9 @@ test.describe('Mastering arrays', () => {
     expect(displayedItemsName, 'Displayed item names does not contain expected value').toContain(/* remove this comment - put expected `expectedItemsNames` variable here and get specific item by index */);
   });
 });
+
+/**
+ * Useful links:
+ * -
+ * -
+ */
