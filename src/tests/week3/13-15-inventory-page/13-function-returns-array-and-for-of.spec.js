@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('./Login.page');
 const { InventoryPage } = require('./Inventory.page');
 
-test('[YAJSC-13] should display all products', async ({ page }) => {
+test('[YAJSC-13] should display all products (with pages and for-of loop)', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const inventoryPage = new InventoryPage(page);
 

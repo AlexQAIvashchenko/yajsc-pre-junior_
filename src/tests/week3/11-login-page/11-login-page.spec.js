@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { LoginPage } from './Login.page';
 
-test('[YAJSC-11] login page test', async ({ page }) => {
+test('[YAJSC-11] should login successfully (with login page)', async ({ page }) => {
   /**
    * Task
    * Fix below code by adding `page` as an argument of LoginPage constructor

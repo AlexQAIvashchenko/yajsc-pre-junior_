@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { LoginPage } from './Login.page';
 import { InventoryPage } from './Inventory.page';
 
-test('[YAJSC-12] inventory page test', async ({ page }) => {
+test('[YAJSC-12] should login successfully (with inventory page)', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   /**

@@ -10,7 +10,7 @@ const performLogin = async (page, userName, password) => {
   await loginButtonElement.click();
 };
 
-test('[YAJSC-8] should contain all items names on the page', async ({ page }) => {
+test('[YAJSC-8] should contain all items names on the page (with loops)', async ({ page }) => {
   const userCredentials = {
     userName: 'standard_user',
     password: 'secret_sauce',

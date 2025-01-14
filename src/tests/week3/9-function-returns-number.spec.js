@@ -23,7 +23,7 @@ const getNumberOfProductNameElements = async (page) => {
   // enter your code here
 }
 
-test('[YAJSC-9] should contain all items names on the page', async ({ page }) => {
+test('[YAJSC-9] should contain all items names on the page (with function returning number)', async ({ page }) => {
   const userCredentials = {
     userName: 'standard_user',
     password: 'secret_sauce',
@@ -40,7 +40,7 @@ test('[YAJSC-9] should contain all items names on the page', async ({ page }) =>
 
   const productNameElements = page.locator('[data-test="inventory-item-name"]');
   for (let i = 0; i < numberOfProductElements; i++) {
-    // (NL): Gets text for i-th element with selector `'[data-test="inventory-item-name"]'`
+    // Next line: Gets text for i-th element with selector `'[data-test="inventory-item-name"]'`
     const actualProduct = await productNameElements.nth(i).textContent();
     expect(actualProduct, `Displayed item [${i}] name is not correct`).toEqual(expectedItemsNames[i]);
   }

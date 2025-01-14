@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('[YAJSC-2] should verify displayed amount of items on the page', async ({ page }) => {
+test('[YAJSC-2] should verify displayed amount of items on the page (with number variable)', async ({ page }) => {
   const userName = 'standard_user';
   const password = 'secret_sauce';
 

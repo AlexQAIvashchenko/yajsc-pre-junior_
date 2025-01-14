@@ -27,7 +27,7 @@ test.describe('Functions', () => {
       password: 'secret_sauce',
     }
   ].forEach(userData => {
-    test(`[YAJSC-7] boolean ${userData.userName}`, async ({ page }) => {
+    test(`[YAJSC-7] should ${userData.isUserValid ? '' : 'not'} login with ${userData.userName} (with login function)`, async ({ page }) => {
       await page.goto('https://www.saucedemo.com/');
 
       // Implemented function is invoked (called) here

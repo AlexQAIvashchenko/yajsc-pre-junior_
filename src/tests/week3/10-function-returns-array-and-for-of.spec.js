@@ -39,7 +39,7 @@ const getProductsNames = async (page) => {
   // enter you code here
 }
 
-test('[YAJSC-10] should display all products', async ({ page }) => {
+test('[YAJSC-10] should display all products (with function returning array)', async ({ page }) => {
   const userCredentials = {
     userName: 'standard_user',
     password: 'secret_sauce',
