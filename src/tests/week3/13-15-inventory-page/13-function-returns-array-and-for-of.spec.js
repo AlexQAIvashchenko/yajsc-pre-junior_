@@ -15,8 +15,14 @@ test('[YAJSC-13] should display all products (with pages and for-of loop)', asyn
 
   await loginPage.performLogin(userCredentials.userName, userCredentials.password);
 
-  const expectedItemsNames = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt',
-      'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
+  const expectedItemsNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)',
+  ];
 
   /**
    * Task :

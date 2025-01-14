@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require("./Login.page");
-const { InventoryPage } = require("./Inventory.page");
+const { LoginPage } = require('./Login.page');
+const { InventoryPage } = require('./Inventory.page');
 
 test('[YAJSC-14] should display all products (with pages and forEach method)', async ({ page }) => {
   const loginPage = new LoginPage(page);
@@ -16,7 +16,7 @@ test('[YAJSC-14] should display all products (with pages and forEach method)', a
   await loginPage.performLogin(userCredentials.userName, userCredentials.password);
 
   const expectedItemsNames = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt',
-      'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
+    'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
 
   const actualProductsNames = await inventoryPage.getProductsNames();
 
@@ -27,7 +27,7 @@ test('[YAJSC-14] should display all products (with pages and forEach method)', a
    */
   expectedItemsNames.forEach((expectedProduct) => {
     expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);
-  })
+  });
 });
 
 /**

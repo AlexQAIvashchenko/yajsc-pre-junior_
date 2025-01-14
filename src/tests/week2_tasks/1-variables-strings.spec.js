@@ -2,7 +2,8 @@ import { expect, test } from '@playwright/test';
 
 // The `test()` function accepts two arguments:
 // 1. Test title.
-// 2. Test function with the `page` fixture. We can use `page` fixture to interact with the browser. Doc - https://playwright.dev/docs/test-fixtures#built-in-fixtures
+// 2. Test function with the `page` fixture. We can use `page` fixture to interact with the browser.
+// Doc - https://playwright.dev/docs/test-fixtures#built-in-fixtures
 // We can write tests without fixtures as well. Doc - https://playwright.dev/docs/test-fixtures#without-fixtures.
 // However, using fixtures is recommended and more efficient. Doc - https://playwright.dev/docs/test-fixtures#with-fixtures
 test('[YAJSC-1] should login successfully (with let & const variables and primitive data types)', async ({ page }) => {
@@ -43,7 +44,7 @@ test('[YAJSC-1] should login successfully (with let & const variables and primit
   // number of items on the page (on the `page` finds elementS with selector `".inventory_item"` and get their quantity using `count` method)
   // should be greater than or equal to `1` (actual result)
   expect(await page.locator('.inventory_item').count(), 'Number of items on the page is not correct')
-      .toBeGreaterThanOrEqual(1);
+    .toBeGreaterThanOrEqual(1);
 });
 
 /**
