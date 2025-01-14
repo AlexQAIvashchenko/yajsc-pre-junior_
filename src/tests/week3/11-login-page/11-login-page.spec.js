@@ -28,12 +28,12 @@ test('[YAJSC-11] should login successfully (with login page)', async ({ page }) 
   await loginPage.performLogin(userCredentials.userName, userCredentials.password/* remove this comment - and provide userName and password */);
 
   await expect(page.locator('.title'), 'Inventory Page Title is not visible')
-      .toBeVisible();
+    .toBeVisible();
 
   expect(await page.locator('.inventory_item').count(), 'Number of items on the page is not correct')
-      .toBeGreaterThanOrEqual(1);
+    .toBeGreaterThanOrEqual(1);
   await expect(page.locator('.inventory_item'), 'Number of items on the page is not correct')
-      .toHaveCount(expectedItemsQuantity);
+    .toHaveCount(expectedItemsQuantity);
 });
 
 /**

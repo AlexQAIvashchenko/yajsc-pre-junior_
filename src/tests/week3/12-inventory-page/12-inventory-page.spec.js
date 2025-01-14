@@ -22,7 +22,7 @@ test('[YAJSC-12] should login successfully (with inventory page)', async ({ page
   await loginPage.performLogin(userCredentials.userName, userCredentials.password);
 
   await expect(inventoryPage.titleElement, 'Inventory Page Title is not visible')
-      .toBeVisible();
+    .toBeVisible();
 
   /**
    * Task :
@@ -33,16 +33,20 @@ test('[YAJSC-12] should login successfully (with inventory page)', async ({ page
    * Fix below code by
    * calling `inventoryPage` and it's method `getNumberOfItemsOnPage` with `await` keyword
    */
-  expect(await inventoryPage.getNumberOfItemsOnPage()/* remove this comment - put `inventoryPage.getNumberOfItemsOnPage()` with `await` here */, 'Number of items on the page is not correct')
-      .toBeGreaterThanOrEqual(1);
+  expect(
+    await inventoryPage.getNumberOfItemsOnPage()/* remove this comment - put `inventoryPage.getNumberOfItemsOnPage()` with `await` here */,
+    'Number of items on the page is not correct'
+  ).toBeGreaterThanOrEqual(1);
 
   /**
    * Part 3:
    * Fix below code by
    * using `inventoryPage` and it's property `itemsElements`
    */
-  await expect(inventoryPage.itemsElements/* remove this comment - put `inventoryPage.itemsElements` here */, 'Number of items on the page is not correct')
-      .toHaveCount(expectedItemsQuantity);
+  await expect(
+    inventoryPage.itemsElements/* remove this comment - put `inventoryPage.itemsElements` here */,
+    'Number of items on the page is not correct',
+  ).toHaveCount(expectedItemsQuantity);
 });
 
 /**

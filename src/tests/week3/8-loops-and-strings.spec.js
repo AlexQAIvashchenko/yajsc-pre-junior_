@@ -39,7 +39,7 @@ test('[YAJSC-8] should contain all items names on the page (with loops)', async 
   for (let i/* enter necessary code here */; i/* enter necessary code here */; i/* enter necessary code here */) {
     // (NL): Gets text for i-th element with selector `'[data-test="inventory-item-name"]'`
     const actualProduct = await productNameElements.nth(i).textContent();
-    expect(actualProduct, `Displayed item [${i}] name is not correct`).toEqual(expectedItemsNames[i])
+    expect(actualProduct, `Displayed item [${i}] name is not correct`).toEqual(expectedItemsNames[i]);
   }
 });
 

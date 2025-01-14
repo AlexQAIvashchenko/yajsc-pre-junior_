@@ -19,12 +19,12 @@ test('[YAJSC-3] should login successfully (with const variable and complex data 
   await page.locator('#login-button').click();
 
   await expect(page.locator('.title'), 'Inventory Page Title is not visible')
-      .toBeVisible();
+    .toBeVisible();
 
   expect(await page.locator('.inventory_item').count(), 'Number of items on the page is not correct')
-      .toBeGreaterThanOrEqual(1);
+    .toBeGreaterThanOrEqual(1);
   await expect(page.locator('.inventory_item'), 'Number of items on the page is not correct')
-      .toHaveCount(expectedItemsQuantity);
+    .toHaveCount(expectedItemsQuantity);
 });
 
 /**

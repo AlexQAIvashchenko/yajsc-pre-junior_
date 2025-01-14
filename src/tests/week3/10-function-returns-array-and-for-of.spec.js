@@ -49,8 +49,14 @@ test('[YAJSC-10] should display all products (with function returning array)', a
 
   await performLogin(page, userCredentials.userName, userCredentials.password);
 
-  const expectedItemsNames = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt',
-      'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
+  const expectedItemsNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)',
+  ];
 
   // Implemented function is invoked (called) here
   const actualProductsNames = await getProductsNames(page);

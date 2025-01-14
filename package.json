@@ -2,12 +2,22 @@
   "name": "yajsc-pre-junior",
   "version": "1.0.0",
   "description": "Pre-Junior framework and course tasks",
-  "scripts": {},
-  "keywords": ["playwright", "aqa", "test automation", "learn js automation"],
+  "scripts": {
+    "eslint-fix": "eslint . --fix"
+  },
+  "keywords": [
+    "playwright",
+    "aqa",
+    "test automation",
+    "learn js automation"
+  ],
   "author": "ov.artem90@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.18.0",
     "@playwright/test": "^1.49.0",
-    "@types/node": "^22.9.3"
+    "@stylistic/eslint-plugin": "^2.13.0",
+    "@types/node": "^22.9.3",
+    "eslint": "^9.18.0"
   }
 }

@@ -22,17 +22,22 @@ test.describe('Mastering arrays', () => {
     await page.locator('#user-name').fill(userCredentials.userName);
     await page.locator('#password').fill(userCredentials.password);
     await page.locator('#login-button').click();
-  })
+  });
 
   test('[YAJSC-4] should contain SOME itemS nameS on the page (with array)', async ({ page }) => {
     const displayedItemsName = await page.locator('[data-test="inventory-item-name"]').allTextContents();
     expect(displayedItemsName, 'Displayed item names does not contain expected values')
-        .toEqual(expect.arrayContaining(/* remove this comment - put expected `expectedItemsNames` variable here */));
+      .toEqual(expect.arrayContaining(/* remove this comment - put expected `expectedItemsNames` variable here */));
   });
 
   test('[YAJSC-5] should contain SPECIFIC item name on the page (with array)', async ({ page }) => {
     const displayedItemsName = await page.locator('[data-test="inventory-item-name"]').allTextContents();
-    expect(displayedItemsName, 'Displayed item names does not contain expected value').toContain(/* remove this comment - put expected `expectedItemsNames` variable here and get specific item by index */);
+    expect(
+      displayedItemsName,
+      'Displayed item names does not contain expected value',
+    ).toContain(
+      /* remove this comment - put expected `expectedItemsNames` variable here and get specific item by index */
+    );
   });
 });
 

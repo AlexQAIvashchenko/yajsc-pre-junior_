@@ -15,13 +15,14 @@ const performLogin = async (page, userName, password) => {
  * Implement function `getNumberOfProductNameElements`
  * It should have one argument - `page` and it's body should contain code that:
  * 1. const variable `productNameElements` and it's value should be result of `page.locator` method with a proper string as in the previous task
- * 2. const variable `numberOfProductElements` and it's value should be result of the `count` method called at `productNameElements` with `await` keyword
+ * 2. const variable `numberOfProductElements` and it's value should be result of the `count` method
+ * called at `productNameElements` with `await` keyword
  * 3. return `numberOfProductElements`
  * hint: you can copy the code from any previous test
  */
 const getNumberOfProductNameElements = async (page) => {
   // enter your code here
-}
+};
 
 test('[YAJSC-9] should contain all items names on the page (with function returning number)', async ({ page }) => {
   const userCredentials = {
@@ -29,8 +30,14 @@ test('[YAJSC-9] should contain all items names on the page (with function return
     password: 'secret_sauce',
   };
 
-  const expectedItemsNames = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt',
-          'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
+  const expectedItemsNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)',
+  ];
 
   await page.goto('https://www.saucedemo.com/');
   await performLogin(page, userCredentials.userName, userCredentials.password);
