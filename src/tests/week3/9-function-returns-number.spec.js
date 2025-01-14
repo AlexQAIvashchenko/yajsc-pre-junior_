@@ -30,8 +30,14 @@ test('[YAJSC-9] should contain all items names on the page (with function return
     password: 'secret_sauce',
   };
 
-  const expectedItemsNames = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt',
-    'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
+  const expectedItemsNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)',
+  ];
 
   await page.goto('https://www.saucedemo.com/');
   await performLogin(page, userCredentials.userName, userCredentials.password);

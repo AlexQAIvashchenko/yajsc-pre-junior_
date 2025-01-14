@@ -15,8 +15,14 @@ test('[YAJSC-14] should display all products (with pages and forEach method)', a
 
   await loginPage.performLogin(userCredentials.userName, userCredentials.password);
 
-  const expectedItemsNames = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt',
-    'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)'];
+  const expectedItemsNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)',
+  ];
 
   const actualProductsNames = await inventoryPage.getProductsNames();
 
