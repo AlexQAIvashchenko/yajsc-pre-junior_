@@ -12,13 +12,12 @@ export class InventoryPage {
    * 2. return `quantity`;
    */
   async getNumberOfItemsOnPage() {
-    const quantity = await this.itemsElements.count();
-    return quantity;
+    // enter your code here
   }
 }
 
 /**
  * Useful links:
- * -
- * -
+ * - export statement - https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+ * - export and import - https://www.programiz.com/javascript/modules
  */

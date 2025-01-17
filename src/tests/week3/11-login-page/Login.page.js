@@ -12,15 +12,16 @@ export class LoginPage {
    * 1. add code that fills user password text field with `password`
    * 2. add code that clicks login button
    */
-  async performLogin(userName, password) {
-    await this.usernameElement.fill(userName);
-    await this.passwordElement.fill(password);
-    await this.loginButtonElement.click();
+  async performLogin(username, password) {
+    await this.usernameElement.fill(username);
+    // enter your code here
   };
 }
 
 /**
  * Useful links:
- * -
- * -
+ * - about classes in JS - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class
+ * - another one about classes -https://www.programiz.com/javascript/classes
+ * - export statement - https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+ * - export and import - https://www.programiz.com/javascript/modules
  */

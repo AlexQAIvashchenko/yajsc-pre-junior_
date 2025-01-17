@@ -7,13 +7,13 @@ test('[YAJSC-15] should display all products (with pages and allTextContents met
   const inventoryPage = new InventoryPage(page);
 
   const userCredentials = {
-    userName: 'standard_user',
+    username: 'standard_user',
     password: 'secret_sauce',
   };
 
   await page.goto('https://www.saucedemo.com/');
 
-  await loginPage.performLogin(userCredentials.userName, userCredentials.password);
+  await loginPage.performLogin(userCredentials.username, userCredentials.password);
 
   const expectedItemsNames = [
     'Sauce Labs Backpack',
@@ -27,15 +27,10 @@ test('[YAJSC-15] should display all products (with pages and allTextContents met
   const actualProductsNames = await inventoryPage.getProductsNames();
 
   /**
-   * Task :
+   * Task 15:
    * Fix below code by using `toEqual` method to compare 2 arrays: `actualProductsNames` and `expectedItemsNames`
    * https://playwright.dev/docs/api/class-genericassertions#generic-assertions-to-equal
    */
-  expect(actualProductsNames, 'Items names are not correct').toEqual(expectedItemsNames);
+  expect(actualProductsNames, 'Items names are not correct')./* remove this comment - put `toEqual` with `expectedItemsNames` variable here */;
 });
 
-/**
- * Useful links:
- * -
- * -
- */

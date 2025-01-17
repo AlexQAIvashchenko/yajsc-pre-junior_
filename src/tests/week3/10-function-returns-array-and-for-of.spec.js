@@ -1,11 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
-const performLogin = async (page, userName, password) => {
+const performLogin = async (page, username, password) => {
   const usernameElement = page.locator('#user-name');
   const passwordElement = page.locator('#password');
   const loginButtonElement = page.locator('#login-button');
 
-  await usernameElement.fill(userName);
+  await usernameElement.fill(username);
   await passwordElement.fill(password);
   await loginButtonElement.click();
 };
@@ -18,11 +18,13 @@ const getNumberOfProductNameElements = async (page) => {
 }
 
 /**
- * Task
+ * Task 10:
  * Implement function `getProductsNames`
  * It should have one argument - `page` and it's body should contain code that:
- * 1. const variable `productNameElements` and it's value should be result of `page.locator` method with a proper string as in the previous task
- * 2. const variable `numberOfProductElements` and it's value should be result of the `getNumberOfProductNameElements` function with `await` keyword
+ * 1. const variable `productNameElements` and it's value should be result of `page.locator` method with a proper string
+ *    as in the previous task
+ * 2. const variable `numberOfProductElements` and it's value should be result of the `getNumberOfProductNameElements`
+ *    function with `await` keyword
  * 3. const variable `actualProductsNames` and it's value should be an empty array
  * 4. `for` loop that iterates over indexes starting from 0 till `numberOfProductElements`
  *    4.1. add elements to `actualProductsNames` by using `push` method (NOTE: already implemented)
@@ -41,13 +43,13 @@ const getProductsNames = async (page) => {
 
 test('[YAJSC-10] should display all products (with function returning array)', async ({ page }) => {
   const userCredentials = {
-    userName: 'standard_user',
+    username: 'standard_user',
     password: 'secret_sauce',
   };
 
   await page.goto('https://www.saucedemo.com/');
 
-  await performLogin(page, userCredentials.userName, userCredentials.password);
+  await performLogin(page, userCredentials.username, userCredentials.password);
 
   const expectedItemsNames = [
     'Sauce Labs Backpack',
@@ -62,7 +64,7 @@ test('[YAJSC-10] should display all products (with function returning array)', a
   const actualProductsNames = await getProductsNames(page);
 
   /**
-   * Task
+   * Task 10.1:
    * Fix below `for-of` loop
    * It should iterate over array of `expectedItemsNames` getting `expectedProduct` element
    */
@@ -73,6 +75,7 @@ test('[YAJSC-10] should display all products (with function returning array)', a
 
 /**
  * Useful links:
- * -
- * -
+ * - Array.push() - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+ * - for...of loop - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+ * - another article about for...of loop - https://www.programiz.com/javascript/for-of
  */

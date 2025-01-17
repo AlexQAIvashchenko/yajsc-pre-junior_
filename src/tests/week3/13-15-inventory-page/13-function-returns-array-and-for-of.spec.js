@@ -7,13 +7,13 @@ test('[YAJSC-13] should display all products (with pages and for-of loop)', asyn
   const inventoryPage = new InventoryPage(page);
 
   const userCredentials = {
-    userName: 'standard_user',
+    username: 'standard_user',
     password: 'secret_sauce',
   };
 
   await page.goto('https://www.saucedemo.com/');
 
-  await loginPage.performLogin(userCredentials.userName, userCredentials.password);
+  await loginPage.performLogin(userCredentials.username, userCredentials.password);
 
   const expectedItemsNames = [
     'Sauce Labs Backpack',
@@ -25,10 +25,10 @@ test('[YAJSC-13] should display all products (with pages and for-of loop)', asyn
   ];
 
   /**
-   * Task :
-   * Open Inventory.page.js file and fix code there so that below code works
+   * Task 13:
+   * Open Inventory.page.js file in the same folder and fix code there so that below code works
    */
-  const actualProductsNames = await inventoryPage.getProductsNames();
+  const actualProductsNames = await inventoryPage.getProductsNames(page);
 
   for (let expectedProduct of expectedItemsNames) {
     expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);

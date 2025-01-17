@@ -1,17 +1,17 @@
 const { test, expect } = require('@playwright/test');
 
-const performLogin = async (page, userName, password) => {
+const performLogin = async (page, username, password) => {
   const usernameElement = page.locator('#user-name');
   const passwordElement = page.locator('#password');
   const loginButtonElement = page.locator('#login-button');
 
-  await usernameElement.fill(userName);
+  await usernameElement.fill(username);
   await passwordElement.fill(password);
   await loginButtonElement.click();
 };
 
 /**
- * Task
+ * Task 9:
  * Implement function `getNumberOfProductNameElements`
  * It should have one argument - `page` and it's body should contain code that:
  * 1. const variable `productNameElements` and it's value should be result of `page.locator` method with a proper string as in the previous task
@@ -26,7 +26,7 @@ const getNumberOfProductNameElements = async (page) => {
 
 test('[YAJSC-9] should contain all items names on the page (with function returning number)', async ({ page }) => {
   const userCredentials = {
-    userName: 'standard_user',
+    username: 'standard_user',
     password: 'secret_sauce',
   };
 
@@ -40,7 +40,7 @@ test('[YAJSC-9] should contain all items names on the page (with function return
   ];
 
   await page.goto('https://www.saucedemo.com/');
-  await performLogin(page, userCredentials.userName, userCredentials.password);
+  await performLogin(page, userCredentials.username, userCredentials.password);
 
   // Implemented function is invoked (called) here
   const numberOfProductElements = await getNumberOfProductNameElements(page);
@@ -55,6 +55,8 @@ test('[YAJSC-9] should contain all items names on the page (with function return
 
 /**
  * Useful links:
- * -
- * -
+ * - return statement - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return
+ * - about async/await - https://www.geeksforgeeks.org/async-await-function-in-javascript/
+ * - locator.nth(i) - https://playwright.dev/docs/api/class-locator#locator-nth
+ * - locator.textContent() - https://playwright.dev/docs/api/class-locator#locator-text-content
  */

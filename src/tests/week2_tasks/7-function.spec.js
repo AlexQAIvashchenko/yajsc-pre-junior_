@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
 
 /**
- * Task
+ * Task 7:
  * Implement function `performLogin`
- * it's arguments should be `page`, `userName` and `password`
+ * it's arguments should be `page`, `username` and `password`
  * and it's body should contain code that:
- * 1. fills username text field with `userName`
+ * 1. fills username text field with `username`
  * 2. fills user password text field with `password`
  * 3. clicks login button
  * hint: you can copy the code from any previous test
@@ -18,20 +18,20 @@ test.describe('Functions', () => {
   [
     {
       isUserValid: true,
-      userName: 'standard_user',
+      username: 'standard_user',
       password: 'secret_sauce',
     },
     {
       isUserValid: false,
-      userName: 'locked_out_user',
+      username: 'locked_out_user',
       password: 'secret_sauce',
     }
   ].forEach(userData => {
-    test(`[YAJSC-7] should ${userData.isUserValid ? '' : 'not'} login with ${userData.userName} (with login function)`, async ({ page }) => {
+    test(`[YAJSC-7] should ${userData.isUserValid ? '' : 'not'} login with ${userData.username} (with login function)`, async ({ page }) => {
       await page.goto('https://www.saucedemo.com/');
 
       // Implemented function is invoked (called) here
-      await performLogin(page, userData.userName, userData.password);
+      await performLogin(page, userData.username, userData.password);
 
       const errorLocator = page.locator('[data-test="error"]');
 
@@ -46,6 +46,7 @@ test.describe('Functions', () => {
 
 /**
  * Useful links:
- * -
- * -
+ * - about functions is JS - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+ * - about functions in JS in simple words - https://www.programiz.com/javascript/function
+ * - Array.forEach - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */

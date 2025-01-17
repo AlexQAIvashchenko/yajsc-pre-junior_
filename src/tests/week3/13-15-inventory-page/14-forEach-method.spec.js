@@ -7,13 +7,13 @@ test('[YAJSC-14] should display all products (with pages and forEach method)', a
   const inventoryPage = new InventoryPage(page);
 
   const userCredentials = {
-    userName: 'standard_user',
+    username: 'standard_user',
     password: 'secret_sauce',
   };
 
   await page.goto('https://www.saucedemo.com/');
 
-  await loginPage.performLogin(userCredentials.userName, userCredentials.password);
+  await loginPage.performLogin(userCredentials.username, userCredentials.password);
 
   const expectedItemsNames = [
     'Sauce Labs Backpack',
@@ -27,17 +27,16 @@ test('[YAJSC-14] should display all products (with pages and forEach method)', a
   const actualProductsNames = await inventoryPage.getProductsNames();
 
   /**
-   * Task :
+   * Task 14:
    * Fix below code by implementing proper usage of `forEach` method
-   * Inside `forEach` method use `expectedProduct` as a name of `expectedItemsNames` array element
+   * Inside `forEach` method use `expectedProduct` as a name of the element in `expectedItemsNames` array
    */
-  expectedItemsNames.forEach((expectedProduct) => {
-    expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);
+  expectedItemsNames.forEach((/* remove this comment - put `expectedProduct` variable here */) => {
+    expect(actualProductsNames, 'Item info is not correct').toContain(/* remove this comment - put `expectedProduct` variable here */);
   });
 });
 
 /**
  * Useful links:
- * -
- * -
+ * - about forEach method - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */

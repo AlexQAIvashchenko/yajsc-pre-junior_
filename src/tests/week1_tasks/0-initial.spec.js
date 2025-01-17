@@ -30,11 +30,11 @@ test('[YAJSC-0] should login successfully', async ({ page }) => {
 
 /**
  * Useful links:
- * - playwright `test` function -
- * - `page.goto` -
- * - `page.locator` -
- * - `page.locator('...').fill` -
- * - `page.locator('...').click` -
- * - playwright `expect` -
- * - `expect(...).toBeVisible` -
+ * - playwright `test` function - https://playwright.dev/docs/api/class-test
+ * - `page.goto` - https://playwright.dev/docs/api/class-page#page-goto
+ * - `page.locator` - https://playwright.dev/docs/api/class-page#page-locator
+ * - `page.locator('...').fill` - https://playwright.dev/docs/api/class-locator#locator-fill
+ * - `page.locator('...').click` - https://playwright.dev/docs/api/class-locator#locator-click
+ * - playwright `expect` - https://playwright.dev/docs/test-assertions
+ * - `expect(...).toBeVisible` - https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-visible
  */

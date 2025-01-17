@@ -6,15 +6,10 @@ export class LoginPage {
     this.loginButtonElement = this.page.locator('#login-button');
   }
 
-  async performLogin(userName, password) {
-    await this.usernameElement.fill(userName);
+  async performLogin(username, password) {
+    await this.usernameElement.fill(username);
     await this.passwordElement.fill(password);
     await this.loginButtonElement.click();
   }
 }
 
-/**
- * Useful links:
- * -
- * -
- */

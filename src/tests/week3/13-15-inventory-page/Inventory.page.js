@@ -14,18 +14,13 @@ export class InventoryPage {
    * Task
    * Implement method `getProductsNames`
    * and it's body should contain code that:
-   * 1. const variable `actualProductsNames` and it's value should be result of the `this.itemsElements.allTextContents` method with `await` keyword
+   * 1. const variable `actualProductsNames` and it's value should be result of the `this.itemsElements.allTextContents`
+   *    method with `await` keyword
    * 2. return `actualProductsNames`
    */
   async getProductsNames(page) {
     // enter you code here
-    const actualProductsNames = await this.itemsElements.allTextContents();
-    return actualProductsNames;
   }
 }
 
-/**
- * Useful links:
- * -
- * -
- */
+
