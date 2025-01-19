@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 // The `test()` function accepts two arguments:
 // 1. Test title.
 // 2. Test function with the `page` fixture. We can use `page` fixture to interact with the browser.
-//  Doc - https://playwright.dev/docs/test-fixtures#built-in-fixtures
+// Doc - https://playwright.dev/docs/test-fixtures#built-in-fixtures
 // We can write tests without fixtures as well. Doc - https://playwright.dev/docs/test-fixtures#without-fixtures.
 // However, using fixtures is recommended and more efficient. Doc - https://playwright.dev/docs/test-fixtures#with-fixtures
 test('[YAJSC-1] should login successfully (with let & const variables and primitive data types)', async ({ page }) => {

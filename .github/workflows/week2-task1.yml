@@ -11,7 +11,7 @@ on:
     paths:
       - 'src/tests/week2_tasks/1*.js'
 jobs:
-  test-unit-0:
+  week2-task1:
     uses: ./.github/workflows/reusable.yml
     with:
       npm-command: 'test-1'
