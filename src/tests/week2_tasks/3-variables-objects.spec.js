@@ -1,7 +1,6 @@
 import { expect, test } from '@playwright/test';
 
 test('[YAJSC-3] should login successfully (with const variable and complex data type (object))', async ({ page }) => {
-
   /**
    * Task 3:
    * Create `const` variable `userCredentials` object with:

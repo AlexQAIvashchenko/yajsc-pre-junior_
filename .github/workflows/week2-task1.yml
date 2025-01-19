@@ -3,8 +3,6 @@ name: Week 2 - Task 1
 run-name: Running test for week 2 and task 1
 
 on:
-  push:
-    branches: [ main, master ]
   pull_request:
     branches:
       - main

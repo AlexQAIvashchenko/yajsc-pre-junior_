@@ -7,7 +7,6 @@ import { expect, test } from '@playwright/test';
 // We can write tests without fixtures as well. Doc - https://playwright.dev/docs/test-fixtures#without-fixtures.
 // However, using fixtures is recommended and more efficient. Doc - https://playwright.dev/docs/test-fixtures#with-fixtures
 test('[YAJSC-1] should login successfully (with let & const variables and primitive data types)', async ({ page }) => {
-
   /**
    * Task 1.1:
    * Create `let` variable `username` with value 'standard_user'

@@ -22,5 +22,3 @@ export class InventoryPage {
     // enter you code here
   }
 }
-
-

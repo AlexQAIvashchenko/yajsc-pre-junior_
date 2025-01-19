@@ -34,9 +34,3 @@ test('[YAJSC-13] should display all products (with pages and for-of loop)', asyn
     expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);
   }
 });
-
-/**
- * Useful links:
- * -
- * -
- */

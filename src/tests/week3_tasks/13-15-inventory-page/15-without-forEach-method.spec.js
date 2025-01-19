@@ -33,4 +33,3 @@ test('[YAJSC-15] should display all products (with pages and allTextContents met
    */
   expect(actualProductsNames, 'Items names are not correct')./* remove this comment - put `toEqual` with `expectedItemsNames` variable here */;
 });
-
