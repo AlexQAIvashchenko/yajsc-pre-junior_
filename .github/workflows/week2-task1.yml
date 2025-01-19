@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/tests/week2_tasks/1**.js'
+      - 'src/tests/week2_tasks/1*.js'
 jobs:
   test-unit-0:
     uses: ./.github/workflows/reusable.yml
