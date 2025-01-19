@@ -4,6 +4,7 @@
   "description": "Pre-Junior framework and course tasks",
   "scripts": {
     "eslint-fix": "eslint . --fix",
+    "report": "npx playwright show-report",
     "test-0": "npx playwright test src/tests/week1_tasks/0-initial.spec.js",
     "test-1": "npx playwright test src/tests/week2_tasks/1-variables-strings.spec.js",
     "test-2": "npx playwright test src/tests/week2_tasks/2-variables-numbers.spec.js",
