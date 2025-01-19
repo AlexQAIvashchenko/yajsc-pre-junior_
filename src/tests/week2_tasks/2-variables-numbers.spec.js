@@ -11,7 +11,7 @@ test('[YAJSC-2] should verify displayed amount of items on the page (with number
   await page.locator('#login-button').click();
 
   /**
-   * Task 2:
+   * Task 21:
    * Create `const` variable `expectedItemsQuantity` and assign a number value that represents number of items displayed on the page
    */
   // write your code below this line
