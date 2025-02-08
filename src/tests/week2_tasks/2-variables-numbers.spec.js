@@ -15,13 +15,13 @@ test('[YAJSC-2] should verify displayed amount of items on the page (with number
    * Create `const` variable `expectedItemsQuantity` and assign a number value that represents number of items displayed on the page
    */
   // write your code below this line
-  const expectedItemsQuantity =6;
+
   /**
    * Task 2.1:
    * Use `expectedItemsQuantity` variable in the below code
    */
   await expect(page.locator('.inventory_item'), 'Number of items on the page is not correct')
-    .toHaveCount(6);
+    .toHaveCount(/* remove this comment - put `expectedItemsQuantity` variable here */);
 });
 
 /**
