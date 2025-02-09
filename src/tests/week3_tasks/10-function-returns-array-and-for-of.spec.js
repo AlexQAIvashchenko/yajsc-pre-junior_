@@ -15,7 +15,7 @@ const getNumberOfProductNameElements = async (page) => {
 
   const numberOfProductElements = await productNameElements.count();
   return numberOfProductElements;
-}
+};
 
 /**
  * Task 10:

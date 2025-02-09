@@ -18,7 +18,7 @@ export class InventoryPage {
    *    method with `await` keyword
    * 2. return `actualProductsNames`
    */
-  async getProductsNames(page) {
+  async getProductsNames() {
     // enter you code here
   }
 }
