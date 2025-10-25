@@ -31,10 +31,10 @@
   "author": "ov.artem90@gmail.com",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@eslint/js": "^9.18.0",
-    "@playwright/test": "^1.49.0",
-    "@stylistic/eslint-plugin": "^2.13.0",
-    "@types/node": "^22.9.3",
-    "eslint": "^9.18.0"
+    "@eslint/js": "^9.38.0",
+    "@playwright/test": "^1.56.1",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0"
   }
 }
