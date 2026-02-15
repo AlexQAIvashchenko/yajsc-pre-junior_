@@ -1,6 +1,7 @@
 # YAJSC-PRE-JUNIOR
 
 Pre-Junior framework and course tasks to get an overview of what JS is and how automated tests look like.
+<!-- Sofia -->
 
 ## Requirements
 
