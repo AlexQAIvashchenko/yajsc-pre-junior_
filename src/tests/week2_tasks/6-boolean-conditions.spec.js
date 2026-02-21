@@ -40,7 +40,7 @@ test.describe('Logical Operators', () => {
        * in case user is not valid - test will verify error message text (line 41)
        * in case of valid user     - test will verify error message text is not visible (line 43)
        */
-      if (userData.isUserValid == false)
+      if (!userData.isUserValid) { }
       {
         await expect(errorLocator).toContainText('Epic sadface: Sorry, this user has been locked out.\n');
       } else {
