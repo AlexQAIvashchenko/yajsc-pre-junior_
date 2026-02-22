@@ -13,12 +13,8 @@ test.describe('Mastering arrays', () => {
    * e.g. 'Sauce Labs Backpack', 'Sauce Labs Fleece Jacket'
    */
   // write your code below this line
-  const expectedItemsNames = [
-    'Sauce Labs Backpack',
-    'Sauce Labs Fleece Jacket',
-    'Sauce Labs Bolt T-Shirt',
 
-  ];
+
   // NOTE: below block will be launched before every test in the describe (see line above) section
   test.beforeEach(async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
@@ -35,7 +31,7 @@ test.describe('Mastering arrays', () => {
      * Use `expectedItemsNames` in the below code
      */
     expect(displayedItemsName, 'Displayed item names does not contain expected values')
-      .toEqual(expect.arrayContaining(expectedItemsNames));
+      .toEqual(expect.arrayContaining(/* remove this comment - put expected `expectedItemsNames` variable here */));
   });
 
   test('[YAJSC-5] should contain SPECIFIC item name on the page (with array)', async ({ page }) => {
@@ -48,7 +44,7 @@ test.describe('Mastering arrays', () => {
       displayedItemsName,
       'Displayed item names does not contain expected value',
     ).toContain(
-      expectedItemsNames[0]
+      /* remove this comment - put expected `expectedItemsNames` variable here and get specific item by index */
     );
   });
 });

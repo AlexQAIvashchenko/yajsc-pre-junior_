@@ -11,9 +11,7 @@ import { expect, test } from '@playwright/test';
  * hint: you can copy the code from any previous test
  */
 const performLogin = async (page, username, password) => {
-  await page.locator('#user-name').fill(username);
-  await page.locator('#password').fill(password);
-  await page.locator('#login-button').click();
+  // enter your code here
 };
 
 test.describe('Functions', () => {
