@@ -1,6 +1,6 @@
 # YAJSC-PRE-JUNIOR
 
-Pre-Junior framework and course tasks to get an overview of what JS is and how automated tests look like by Anastasiia Maiier.
+Pre-Junior framework and course tasks to get an overview of what JS is and how automated tests look like.
 
 ## Requirements
 
@@ -34,4 +34,3 @@ npm run test-<unit_number>
 ```
 
 You may find the list of the scripts in the `package.json` file, section _scripts_.
-# yajsc-pre-junior-1
