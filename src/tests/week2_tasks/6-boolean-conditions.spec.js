@@ -18,11 +18,13 @@ test.describe('Logical Operators', () => {
       // write your code here
       username: 'standard_user',
       password: 'secret_sauce',
+      isUserValid: true
     },
     {
       // write your code here
       username: 'locked_out_user',
       password: 'secret_sauce',
+      isUserValid: false
     }
   ].forEach(userData => {
     test(`[YAJSC-6] should ${userData.isUserValid ? '' : 'not'} login with ${userData.username} (with boolean property)`, async ({ page }) => {
@@ -38,7 +40,7 @@ test.describe('Logical Operators', () => {
        * in case user is not valid - test will verify error message text (line 41)
        * in case of valid user     - test will verify error message text is not visible (line 43)
        */
-      if (/* remove this comment - add check whether `isUserValid` equals false */) {
+      if (!userData.isUserValid) {
         await expect(errorLocator).toContainText('Epic sadface: Sorry, this user has been locked out.\n');
       } else {
         await expect(errorLocator).toBeVisible({ visible: false });
