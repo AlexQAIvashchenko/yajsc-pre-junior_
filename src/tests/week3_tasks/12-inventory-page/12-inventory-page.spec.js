@@ -1,6 +1,5 @@
 import { expect, test } from '@playwright/test';
 import { InventoryPage } from './Inventory.page';
-import { LoginPage } from './Login.page';
 
 test('[YAJSC-12] should login successfully (with inventory page)', async ({ page }) => {
   const loginPage = new LoginPage(page);
