@@ -33,7 +33,7 @@ const getNumberOfProductNameElements = async (page) => {
  */
 const getProductsNames = async (page) => {
   const productNameElements = page.locator('[data-test="inventory-item-name"]');
-  const numberOfProductElements = await await getNumberOfProductNameElements(page);
+  const numberOfProductElements = await getNumberOfProductNameElements(page);
   const actualProductsNames = [];
 
   for (let i = 0; i < numberOfProductElements; i++) {
